@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools",              // C/C++ IntelliSense and debugging
+    "llvm-vs-code-extensions.vscode-clangd", // Optional: Clangd for C/C++ language features
+    "ms-vscode.makefile-tools",        // Makefile support
+    "streetsidesoftware.code-spell-checker", // Spell checker for Markdown and comments
+    "yzhang.markdown-all-in-one",      // Markdown editing and preview
+    "timonwong.shellcheck",            // Shell script linting
+    "github.copilot",                  // GitHub Copilot for code suggestions
+    "github.copilot-chat",             // GitHub Copilot Chat for inline help
+    "eamodio.gitlens"                  // GitLens for Git insights
+  ]
+}
