@@ -9,17 +9,14 @@
 /*   Updated: 2025/07/20 06:02:30 by rezmes    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_ultimate_div_mod(int *a, int *b)
+void    ft_ultimate_div_mod(int *a, int *b)
 {
-	if (*b == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		int	buff;
-		buff = *a / *b;
-		*b = *a % *b;
-		*a = buff;
-	}
+        int     buff;
+        if (*b != 0)
+        {
+                buff = *a / *b;
+                *b = *a % *b;
+                *a = buff;
+        }
+}
 }
