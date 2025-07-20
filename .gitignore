@@ -1,0 +1,200 @@
+# -----------------------------------------------------------------------------
+# Comprehensive .gitignore for 42 Piscine Simulation (Revised for explicit ignores)
+# This file ensures that only the required exercise solution files are tracked
+# and pushed to your Git repository, while keeping other local files.
+# -----------------------------------------------------------------------------
+
+# Main Rule: Ignore everything by default
+# This line tells Git to ignore all files and directories.
+*
+
+# Exceptions: Files and directories that *must* be tracked
+# -----------------------------------------------------------------------------
+
+# The .gitignore file itself must be tracked
+!.gitignore
+
+# Allow Git to traverse the 'ex' directory and its subdirectories
+# This allows Git to look inside the exercise structure.
+!ex/
+!ex/*/
+!ex/*/*/
+!ex/*/*/*/
+!ex/*/*/*/*/
+!ex/*/*/*/*/*/ # For deeper nesting if needed (e.g., C10, C11)
+
+# Specific patterns for exercise solution files (ft_*.c)
+# These lines explicitly allow the solution files to be tracked.
+# You need to ensure these patterns match the exact filenames
+# required by Piscine for each exercise.
+# Format: !ex/C<XX>/ex<YY>/ft_<function_name>.c
+
+# --- C00 Exercises ---
+!ex/C00/ex00/ft_putchar.c
+!ex/C00/ex01/ft_print_alphabet.c
+!ex/C00/ex02/ft_print_reverse_alphabet.c
+!ex/C00/ex03/ft_print_numbers.c
+!ex/C00/ex04/ft_is_negative.c
+!ex/C00/ex05/ft_print_comb.c
+!ex/C00/ex06/ft_print_comb2.c
+!ex/C00/ex07/ft_putnbr.c
+!ex/C00/ex08/ft_print_combn.c
+
+# --- C01 Exercises ---
+!ex/C01/ex00/ft_ft.c
+!ex/C01/ex01/ft_ultimate_ft.c
+!ex/C01/ex02/ft_swap.c
+!ex/C01/ex03/ft_div_mod.c
+!ex/C01/ex04/ft_ultimate_div_mod.c
+!ex/C01/ex05/ft_putstr.c
+!ex/C01/ex06/ft_strlen.c
+!ex/C01/ex07/ft_rev_int_tab.c
+!ex/C01/ex08/ft_sort_int_tab.c
+
+# --- C02 Exercises ---
+!ex/C02/ex00/ft_strcpy.c
+!ex/C02/ex01/ft_strncpy.c
+!ex/C02/ex02/ft_str_is_alpha.c
+!ex/C02/ex03/ft_str_is_numeric.c
+!ex/C02/ex04/ft_str_is_lowercase.c
+!ex/C02/ex05/ft_str_is_uppercase.c
+!ex/C02/ex06/ft_str_is_printable.c
+!ex/C02/ex07/ft_strupcase.c
+!ex/C02/ex08/ft_strlowcase.c
+!ex/C02/ex09/ft_strcapitalize.c
+!ex/C02/ex10/ft_strlcpy.c
+!ex/C02/ex11/ft_putstr_non_printable.c
+!ex/C02/ex12/ft_print_memory.c
+
+# --- C03 Exercises ---
+!ex/C03/ex00/ft_strcmp.c
+!ex/C03/ex01/ft_strncmp.c
+!ex/C03/ex02/ft_strcat.c
+!ex/C03/ex03/ft_strncat.c
+!ex/C03/ex04/ft_strstr.c
+!ex/C03/ex05/ft_strlcat.c
+
+# --- C04 Exercises ---
+!ex/C04/ex00/ft_strlen.c
+!ex/C04/ex01/ft_putstr.c
+!ex/C04/ex02/ft_putnbr.c
+!ex/C04/ex03/ft_atoi.c
+!ex/C04/ex04/ft_putnbr_base.c
+!ex/C04/ex05/ft_atoi_base.c
+
+# --- C05 Exercises ---
+!ex/C05/ex00/ft_iterative_factorial.c
+!ex/C05/ex01/ft_recursive_factorial.c
+!ex/C05/ex02/ft_iterative_power.c
+!ex/C05/ex03/ft_recursive_power.c
+!ex/C05/ex04/ft_fibonacci.c
+!ex/C05/ex05/ft_sqrt.c
+!ex/C05/ex06/ft_is_prime.c
+!ex/C05/ex07/ft_find_next_prime.c
+!ex/C05/ex08/ft_ten_queens_puzzle.c
+
+# --- C06 Exercises ---
+!ex/C06/ex00/ft_print_program_name.c
+!ex/C06/ex01/ft_print_params.c
+!ex/C06/ex02/ft_rev_params.c
+!ex/C06/ex03/ft_sort_params.c
+
+# --- C07 Exercises ---
+!ex/C07/ex00/ft_strdup.c
+!ex/C07/ex01/ft_range.c
+!ex/C07/ex02/ft_ultimate_range.c
+!ex/C07/ex03/ft_strjoin.c
+!ex/C07/ex04/ft_convert_base.c
+!ex/C07/ex05/ft_split.c
+
+# --- C08 Exercises ---
+!ex/C08/ex00/ft_putchar.c
+!ex/C08/ex01/ft_swap.c
+!ex/C08/ex02/ft_putstr.c
+!ex/C08/ex03/ft_strcmp.c
+!ex/C08/ex04/ft_strs_to_tab.c
+!ex/C08/ex05/ft_show_tab.c
+# If you have a libft.a or similar for C08, you might need to add it:
+# !ex/C08/libft.a
+
+# --- C09 Exercises ---
+!ex/C09/ex00/ft_putchar.c
+!ex/C09/ex01/ft_swap.c
+!ex/C09/ex02/ft_putstr.c
+!ex/C09/ex03/ft_strcmp.c
+# Add other C09 exercise functions as needed.
+
+# -----------------------------------------------------------------------------
+# General and Personal Files to Ignore (even if they are in allowed directories)
+# These rules are more specific to ensure they take precedence within 'ex' directories.
+# -----------------------------------------------------------------------------
+
+# Editor temporary/swap files (global and within ex directories)
+*.swp
+*~
+.#*
+*.bak
+*.tmp
+*.sublime-workspace
+.vscode/ # Ignore the .vscode directory itself
+
+# Compilation and build artifacts (global and within ex directories)
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.out
+*.d # Dependency files
+*.gch # Precompiled headers
+*.pch # Precompiled headers
+*.obj
+*.ko
+*.elf
+*.ilk
+*.map
+*.exp
+*.dSYM/ # macOS debug symbols
+*.su
+*.idb
+*.pdb
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+a.out # Explicitly ignore a.out, which appeared in your status
+
+# Test files and directories (global and specific to ex directories)
+test
+test*
+*/test* # Matches test files in any subdirectory
+*/test/ # Matches test directories in any subdirectory
+ex/*/ex*/*/test* # Explicitly ignore test files within CXX/exYY
+ex/*/ex*/*/test/ # Explicitly ignore test directories within CXX/exYY
+
+# Common non-Piscine files (global and specific to ex directories)
+main.c # For main.c at root
+header/ # For header/ at root
+ex/*/ex*/*/main.c # Explicitly ignore main.c within CXX/exYY
+ex/*/ex*/*/header/ # Explicitly ignore header directories within CXX/exYY
+ex/*/ex*/*/NormErrors-*.md # Explicitly ignore NormErrors files
+
+# Your specific personal files (from your 'ls' output at ~/pis)
+AA.c
+all-extensions.txt
+header.c
+mydraft/ # Treat mydraft as a directory to ignore
+myfilename
+vscode-extensions.txt
+
+# Other common files/directories to ignore
+.DS_Store # macOS specific
+.idea/ # IntelliJ/CLion configuration directory
+.project # Eclipse project files
+.cproject # Eclipse C/C++ project files
+*.log
+*.txt
+
