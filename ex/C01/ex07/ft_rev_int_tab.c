@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rezmes                                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/20 06:02:30 by rezmes    #+#    #+#             */
-/*   Updated: 2025/07/20 06:02:30 by rezmes    ###   ########.fr       */
+/*   Created: 2025/07/21 20:42:56 by rezmes    #+#    #+#             */
+/*   Updated: 2025/07/21 20:42:56 by rezmes    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void    ft_ultimate_div_mod(int *a, int *b)
+void	ft_rev_int_tab(int *tab, int size)
 {
-        int     buff;
-        if (*b != 0)
-        {
-                buff = *a / *b;
-                *b = *a % *b;
-                *a = buff;
-        }
+	int	buff;
+	int	i;
+
+	i = 0;
+	while (i < size / 2)
+	{
+		buff = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = buff;
+		i++;
+	}
 }
