@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rezmes                                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 17:18:44 by rezmes    #+#    #+#             */
-/*   Updated: 2025/07/24 17:18:44 by rezmes    ###   ########.fr       */
+/*   Created: 2025/07/25 11:28:42 by rezmes    #+#    #+#             */
+/*   Updated: 2025/07/25 11:28:42 by rezmes    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strcat(char *dest, char*src)
 {
-	int i;
-       
+	int	i;
+	int	dest_len;
+
+	dest_len = 0;
+	while (dest[dest_len])
+	{
+		dest_len++;
+	}
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-	i++;
-    return (s1[i] - s2[i]);
+	while (src[i])
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	dest[dest_len + i] = '\0';
+	return (dest);
 }
